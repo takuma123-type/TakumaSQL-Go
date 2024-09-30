@@ -1,0 +1,22 @@
+{
+    "users": {
+      "Name": "users",
+      "Records": [
+        {
+          "fields": {
+            "id": "1",
+            "name": "John Doe",
+            "email": "john@example.com"
+          }
+        },
+        {
+          "fields": {
+            "id": "2",
+            "name": "Jane Doe",
+            "email": "jane@example.com"
+          }
+        }
+      ]
+    }
+  }
+  

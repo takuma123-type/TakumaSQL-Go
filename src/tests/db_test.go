@@ -36,7 +36,7 @@ func TestCreateTableAndInsertRecord(t *testing.T) {
 		t.Errorf("Expected status code %d but got %d", http.StatusCreated, w.Code)
 	}
 	if !bytes.Contains(w.Body.Bytes(), []byte("Table created successfully")) {
-		t.Errorf("Expected success message in response body")
+		t.Errorf("Expected success message in response body, but got: %s", w.Body.String())
 	}
 
 	// レコード作成リクエスト
@@ -51,6 +51,6 @@ func TestCreateTableAndInsertRecord(t *testing.T) {
 		t.Errorf("Expected status code %d but got %d", http.StatusCreated, w.Code)
 	}
 	if !bytes.Contains(w.Body.Bytes(), []byte("Record created successfully")) {
-		t.Errorf("Expected success message in response body")
+		t.Errorf("Expected success message in response body, but got: %s", w.Body.String())
 	}
 }
